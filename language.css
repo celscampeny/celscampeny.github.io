@@ -1,0 +1,59 @@
+/* Language switcher: text-only dropdown placed right before MENU */
+header.nav .nav-actions{
+  display:flex;align-items:center;justify-content:flex-end;gap:clamp(10px,1.4vw,18px);
+  margin-left:auto;flex:0 0 auto;
+}
+header.nav .nav-actions .lang-switcher,
+header.nav .nav-actions .menu-dropdown{flex:0 0 auto;margin:0;}
+header.nav .lang-switcher,
+header.project-nav .lang-switcher{
+  position:relative;display:flex;align-items:center;z-index:120;
+}
+.lang-switcher .lang-trigger{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:0;border:0;background:transparent;box-shadow:none;outline:none;
+  font:inherit;font-size:12px;letter-spacing:.06em;font-weight:700;
+  color:#c6f44f;cursor:pointer;
+}
+.lang-switcher .lang-trigger:hover,
+.lang-switcher .lang-trigger:focus-visible{
+  background:transparent;color:#c6f44f;opacity:.88;
+}
+.lang-switcher .lang-current{color:#c6f44f;font-weight:700;}
+.lang-switcher .lang-chevron{
+  color:currentColor;font-size:12px;line-height:1;display:inline-flex;align-items:center;
+  transform:translateY(0);transition:transform .18s ease;
+}
+.lang-switcher.is-open .lang-chevron{transform:rotate(180deg);}
+.lang-options{
+  position:absolute;top:calc(100% + 8px);right:0;min-width:88px;
+  display:flex;flex-direction:column;gap:0;
+  padding:8px 0;background:#172ec0;color:#fff;border:1px solid rgba(255,255,255,.18);
+  border-radius:10px;box-shadow:0 18px 34px rgba(0,14,60,.28);
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-4px);
+  transition:opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+.lang-switcher.is-open .lang-options{
+  opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);
+}
+.lang-options button{
+  width:100%;border:0;background:transparent;color:#fff;cursor:pointer;
+  text-align:left;padding:8px 14px;font:inherit;font-size:12px;letter-spacing:.04em;font-weight:500;
+}
+.lang-options button:hover,
+.lang-options button:focus-visible{background:rgba(255,255,255,.10);outline:none;}
+.lang-options button.is-selected{color:#c6f44f;font-weight:700;background:transparent;}
+header.project-nav .lang-switcher{margin-left:auto;margin-right:14px;}
+header.project-nav .lang-options{background:#171717;}
+@media (max-width: 700px){
+  header.nav .nav-actions{gap:12px;}
+  .lang-switcher .lang-trigger,.lang-options button{font-size:11px;}
+  .lang-options{min-width:80px;}
+}
+@media (prefers-reduced-motion: reduce){
+  .lang-chevron,.lang-options{transition:none;}
+}
+
+/* CAT is typographically emphasized in the dropdown, even when another language is active. */
+.lang-options button[data-lang="ca"]{font-weight:900;}
+.lang-switcher .lang-trigger:has(.lang-current){font-weight:800;}

@@ -1,0 +1,1 @@
+Selector EN / CAT / ES / PT-BR. Traduccions controlades a languages.js, conserva la llengua amb localStorage. Instal·lació: copia languages.js, language.css, index.html i project.html a l’arrel. Traduccions editorials llargues dels casos especials es poden revisar i completar al diccionari WORDS de languages.js. Els documents PDF originals no es tradueixen.

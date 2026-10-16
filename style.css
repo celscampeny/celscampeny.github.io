@@ -1163,3 +1163,275 @@ body {
  .home-page #contact.contact-section { padding-top: 85px; padding-bottom: 55px; gap: 40px; }
  .home-page #contact h2 { font-size: clamp(46px, 10.3vw, 78px); }
 }
+
+/* CELS — responsive refinement for laptops / translated long headings.
+   Limited to layout and typography; 3D transforms and entrance animations stay unchanged. */
+html,body{max-width:100%;}
+.home-page main,.project-body main{min-width:0;max-width:100%;}
+.home-page section,.case-study,.case-section,.case-intro{min-width:0;}
+.home-page .manifest h2,.home-page .manifest h3,
+.home-page #contact h2,.home-page #about .about-me-title,
+.case-intro h1,.case-cover strong{overflow-wrap:normal;}
+
+@media (min-width:751px) and (max-width:1500px){
+  .home-page .hero-portfolio-cover{
+    height:100svh;min-height:min(560px,100svh);
+  }
+  .home-page .hero-portfolio-cover .hero-front-name{
+    font-size:clamp(48px,5.8vw,86px);
+    top:clamp(110px,19svh,175px);
+  }
+  .home-page .hero-portfolio-cover .roles{
+    max-width:85%;flex-wrap:wrap;
+  }
+  .home-page .manifest{
+    min-height:0;
+    padding-block:clamp(85px,11svh,140px);
+  }
+  .home-page .manifest h2{
+    font-size:clamp(50px,7.3vw,106px);
+    max-width:100%;line-height:.99;
+    letter-spacing:-.055em;
+  }
+  .home-page .manifest h3{
+    font-size:clamp(39px,5vw,70px);
+    max-width:85%;margin-top:clamp(44px,6svh,85px);
+    line-height:1.04;
+  }
+  .home-page #about .about-me-layout{
+    gap:clamp(20px,3.2vw,58px);
+    grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);
+  }
+  .home-page #about .about-me-title{
+    font-size:clamp(63px,8.5vw,126px);
+    line-height:.91;
+    letter-spacing:-.065em;
+  }
+  .home-page #about .about-me-content{
+    height:clamp(430px,50vw,600px);
+  }
+  .home-page #about .about-me-introduction{
+    top:clamp(230px,26vw,340px);
+  }
+  .home-page #contact.contact-section{
+    min-height:0;
+    padding-top:clamp(84px,11svh,130px);
+    padding-bottom:clamp(50px,7svh,80px);
+    gap:clamp(24px,3.5svh,55px);
+  }
+  .home-page #contact h2{
+    font-size:clamp(59px,7.4vw,105px);
+    line-height:.96;letter-spacing:-.055em;
+  }
+  .home-page #contact .contact-intro{max-width:100%;}
+  .case-intro h1{font-size:clamp(54px,8vw,115px);line-height:.98;}
+  .case-cover strong{font-size:clamp(54px,8.4vw,120px);line-height:.96;}
+}
+@media (min-width:751px) and (max-height:800px){
+  .home-page .hero-portfolio-cover{min-height:min(480px,100svh);}
+  .home-page .hero-portfolio-cover .hero-front-name{top:18%;font-size:clamp(47px,5.5vw,76px);}
+  .home-page .hero-portfolio-cover .roles{bottom:10%;}
+  .home-page .manifest{padding-top:85px;padding-bottom:80px;}
+  .home-page .manifest h2{font-size:clamp(49px,6.7vw,96px);}
+  .home-page .manifest h3{margin-top:40px;font-size:clamp(37px,4.6vw,66px);}
+  .home-page #contact.contact-section{padding-top:85px;padding-bottom:55px;gap:30px;}
+  .home-page #contact h2{font-size:clamp(54px,7vw,96px);}
+}
+@media (min-width:751px) and (max-width:1100px){
+  .home-page #about .about-me-layout{grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:24px;}
+  .home-page #about .about-me-title{font-size:clamp(60px,8vw,91px);}
+  .home-page #about .about-me-introduction{top:clamp(185px,23vw,270px);}
+  .home-page #about .about-me-content{height:clamp(430px,52vw,545px);}
+  .home-page #contact h2{font-size:clamp(54px,7vw,78px);}
+}
+@media (max-width:750px){
+  .home-page .manifest h2,.home-page .manifest h3{max-width:100%;line-height:1.02;}
+  .home-page #contact h2{line-height:1;}
+  .case-intro h1,.case-cover strong{line-height:1;}
+}
+
+/* CELS laptop fit: preserve desktop composition, 3D JS and scroll animations.
+   At medium widths, all top-level sections are composed for one usable viewport.
+   Long ABOUT reading intentionally scrolls within its existing text viewport. */
+@media (min-width: 751px) and (max-width: 1600px) {
+  .home-page .hero-portfolio-cover .hero-bg-word {
+    font-size: clamp(58px, 14.4vw, 220px);
+    max-width: 91vw;
+    white-space: nowrap;
+  }
+  .home-page .hero-portfolio-cover .hero-front-name {
+    font-size: clamp(46px, min(5.4vw, 9.5svh), 85px);
+  }
+  .home-page .manifest {
+    box-sizing:border-box;
+    height:100svh;min-height:0;
+    padding-top:clamp(90px, 15svh, 120px);
+    padding-bottom:clamp(24px, 4svh, 45px);
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .home-page .manifest .label {flex:0 0 auto;}
+  .home-page .manifest h2 {font-size:clamp(38px, min(6.3vw, 10.2svh), 100px);line-height:.96;}
+  .home-page .manifest h3 {font-size:clamp(28px,min(4.2vw,7svh),64px);margin-top:clamp(18px,3svh,36px);line-height:1;}
+  .home-page #about.about-me-section {
+    box-sizing:border-box;min-height:0;height:100svh;
+    padding-top:clamp(94px,13svh,115px);padding-bottom:clamp(16px,3svh,30px);
+    display:flex;flex-direction:column;
+  }
+  .home-page #about .label{margin-bottom:clamp(10px,2svh,22px);flex:none;}
+  .home-page #about .about-me-layout{width:100%;flex:1;min-height:0;align-items:center;}
+  .home-page #about .about-me-content{
+    height:100%;max-height:calc(100svh - 155px);min-height:0;
+  }
+  .home-page #about .about-me-title{
+    font-size:clamp(56px,min(8vw,15svh),124px);
+    line-height:.87;
+  }
+  .home-page #about .about-me-introduction{
+    top:clamp(162px,31svh,300px);min-height:0;
+  }
+  .home-page #about .about-me-portrait{
+    min-height:0;height:min(65svh,560px);
+    padding-bottom:0;
+    align-self:stretch;
+    align-items:flex-end;
+    justify-content:center;
+  }
+  .home-page #about .about-me-portrait-image{
+    max-height:min(68svh,560px);width:auto;max-width:100%;
+    object-fit:contain;
+  }
+  .home-page #work.work{
+    box-sizing:border-box;min-height:0;height:100svh;
+    padding-top:clamp(90px,13svh,115px);
+    padding-bottom:clamp(12px,2svh,24px);
+    display:flex;flex-direction:column;
+  }
+  .home-page #work > .label{margin-bottom:clamp(5px,1svh,16px);flex:none;}
+  .home-page #work .gallery3d{
+    width:100%;flex:1;min-height:0;
+    grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+    gap:clamp(20px,4vw,65px);
+    align-items:center;
+  }
+  .home-page #work .gallery-stage{
+    min-height:0;height:100%;max-height:calc(100svh - 160px);
+  }
+  .home-page #work .project-stack{
+    margin-top:clamp(45px,10svh,96px);
+    width:min(75%,340px);
+    height:clamp(150px,27svh,220px);
+  }
+  .home-page #work .stack-slot,
+  .home-page #work .stack-slot.is-last,
+  .home-page #work .stack-card {
+    height:clamp(148px,26svh,220px);
+  }
+  .home-page #work .gallery-info{padding:0;min-width:0;}
+  .home-page #work .gallery-info h2{
+    font-size:clamp(38px,min(5.2vw,9svh),78px);
+    margin-top:clamp(8px,1.4svh,18px);
+    margin-bottom:clamp(5px,1svh,15px);
+  }
+  .home-page #work .gallery-description{
+    margin-top:clamp(12px,2svh,24px);
+    font-size:clamp(12px,1vw,15px);line-height:1.45;
+  }
+  .home-page #contact.contact-section{
+    height:100svh;min-height:0;
+    box-sizing:border-box;
+    padding-top:clamp(88px,12svh,110px);
+    padding-bottom:clamp(15px,3svh,30px);
+    gap:clamp(12px,2.4svh,26px);
+  }
+  .home-page #contact h2{
+    font-size:clamp(44px,min(6.5vw,10svh),92px);
+    margin-bottom:clamp(12px,2svh,23px);
+    line-height:.9;
+  }
+  .home-page #contact .contact-eyebrow{margin-bottom:clamp(8px,1.5svh,16px);}
+  .home-page #contact .contact-description{margin-bottom:clamp(12px,2svh,22px);font-size:clamp(13px,1.2vw,18px);}
+  .home-page #contact .contact-primary-cta{padding:clamp(10px,1.6svh,16px) 20px;}
+  .home-page #contact .contact-detail{padding-top:clamp(10px,1.8svh,20px);padding-bottom:clamp(10px,1.8svh,22px);gap:clamp(6px,1.5svh,14px);}
+}
+/* Viewport fit for 1366x768, 1440x900 and similar medium laptop windows. */
+@media (min-width:751px) and (max-height:750px){
+  .home-page #about .about-me-title{font-size:clamp(52px,min(7vw,13svh),98px);}
+  .home-page #about .about-me-introduction{top:clamp(148px,28svh,225px);}
+  .home-page #work .project-stack{margin-top:clamp(33px,8svh,60px);}
+  .home-page #work .gallery-stage{max-height:calc(100svh - 140px);}
+  .home-page #contact .contact-detail-label{font-size:10px;}
+}
+/* Smaller phones stay naturally scrollable; avoid clipping full texts. */
+
+/* CELS — precise laptop alignment: preserve PORTFOLIO's original position. */
+@media (min-width:751px) and (max-width:1600px) {
+  /* Align the CELS CAMPENY block with the leading edge of PORTFOLIO. */
+  .home-page .hero-portfolio-cover .hero-front-name {
+    left: 8.7%;
+  }
+  /* Give the portrait a little more breathing room and keep it slightly lower. */
+  .home-page #about .about-me-portrait {
+    align-self:stretch;
+    align-items:flex-end;
+    justify-content:center;
+    padding-bottom:clamp(34px,5.2svh,56px);
+  }
+  .home-page #about .about-me-portrait-image {
+    max-height:min(56svh,455px);
+    translate:0 4px;
+  }
+  /* Caption aligned to the portrait width, sitting on the lower baseline. */
+  .home-page #about .about-me-portrait > p {
+    left:50%;
+    right:auto;
+    width:min(78%, 455px);
+    transform:translateX(-50%);
+    bottom:0;
+    margin:0;
+  }
+}
+
+
+/* ABOUT ME — only medium screens/laptops (desktop-wide unchanged). */
+@media (min-width: 751px) and (max-width: 1600px) {
+  /* Lower divider and introduction under SOBRE MI. */
+  .home-page #about .about-me-introduction {
+    top: clamp(195px, 36svh, 335px);
+  }
+  /* Larger portrait with caption directly beneath it in the same column. */
+  .home-page #about .about-me-portrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 0 clamp(5px, 1svh, 12px);
+    gap: clamp(4px, .65svh, 8px);
+  }
+  .home-page #about .about-me-portrait-image {
+    display: block;
+    width: min(100%, 530px);
+    height: auto;
+    max-height: min(60svh, 510px);
+    object-fit: contain;
+    translate: 0 0;
+    flex: 0 1 auto;
+  }
+  .home-page #about .about-me-portrait > p {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    align-self: center;
+    width: min(100%, 530px);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 751px) and (max-width: 1600px) and (max-height: 750px) {
+  .home-page #about .about-me-introduction {
+    top: clamp(180px, 33svh, 255px);
+  }
+}
