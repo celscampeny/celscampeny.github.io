@@ -1,0 +1,13 @@
+CELS PORTFOLIO — GitHub Pages
+
+El repositori ha de ser NOMUSUARI.github.io (substituir NOMUSUARI pel teu usuari real de GitHub).
+Aquest ZIP inclou index.html a l’arrel i .nojekyll.
+
+Per pujar-lo amb GitHub Desktop:
+1. Extreu aquest ZIP en una carpeta.
+2. GitHub Desktop > File > Add local repository > Choose la carpeta; si no és un repositori, Create a Repository.
+3. Tria el nom NOMUSUARI.github.io i publica el repositori amb Publish repository (desmarca Keep this code private).
+4. A GitHub > Settings > Pages, a Build and deployment: Deploy from a branch; branch main i / (root). Desa.
+5. Accedeix a https://NOMUSUARI.github.io quan GitHub indiqui que el desplegament ha acabat.
+
+NOTA: Hi ha PDF de més de 25 MB; per això s'aconsella GitHub Desktop i no la pujada d'arxius des del navegador. Cada fitxer és inferior a 100 MB.

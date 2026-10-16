@@ -1,0 +1,1 @@
+MARKET RESEARCH: three projects. Nude Project (11/11 pages) and Estrella Damm Empathy Map (3/3 pages) are complete mosaics. Visit Pomerania displays 9 selected pages and includes the complete PDF (16 pages). Every mosaic tile can be enlarged. Home gallery code unchanged.
