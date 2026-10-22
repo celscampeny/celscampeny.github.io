@@ -2,7 +2,7 @@
 (()=>{
  if(new URLSearchParams(location.search).get('id')!=='adds')return;
  const main=document.querySelector('.case-study');if(!main)return;
- document.body.classList.add('adds-case-body');main.classList.add('adds-case');document.title='ADDS — Graphic Works | Cels Campeny';
+ document.body.classList.add('adds-case-body');main.classList.add('adds-case');document.title='ADS — Graphic Works | Cels Campeny';
  const items=[
   {title:'AIRTag',kind:'OUT-OF-HOME · OPPORTUNITY ADVERTISING',src:'assets/adds/airtag.webp',alt:'AirTag opportunity advertising billboard inspired by the Louvre jewellery theft',description:'An unsolicited OOH concept for Apple AirTag inspired by the Louvre jewellery theft. Using a topical news story and a minimalist art direction, the piece turns AirTag’s finding function into an immediate visual punchline.'},
   {title:'GIROCLETA',kind:'POSTER · ART DIRECTION',src:'assets/adds/girocleta.webp',alt:'Girocleta bicycle promotional poster designed like a performance racing advertisement',description:'A promotional poster for Girocleta that borrows the visual codes of rally and performance-car advertising. Exaggerated product presentation, bold type and racing cues reimagine an everyday bicycle as an urban racing machine.'},
@@ -10,8 +10,8 @@
   {title:'TALKUAL',kind:'DIGITAL BANNERS · SEM CAMPAIGN',src:'assets/adds/talkual-wide.webp',alt:'Talkual digital banner graphics featuring imperfect fruits and vegetables',description:'A set of digital advertising banners developed for Talkual’s SEM campaign. Adapted across horizontal, vertical and square placements, the layouts keep the brand identity recognisable while highlighting naturally imperfect fruit and vegetables.',gallery:true},
   {title:'BRETT',kind:'SOCIAL MEDIA · OOH / DOOH',src:'assets/adds/brett.webp',alt:'BRETT fictional condom brand campaign with pink and fluorescent green Quevedo-inspired typography',description:'A concept campaign for a fictional condom brand, created for social media and out-of-home formats. A playful reference to a Quevedo song connects the message with Gen Z pop culture while encouraging protection through bold, attention-grabbing art direction.'}
  ];
- main.innerHTML=`<section class="adds-shell" aria-label="ADDS graphic works gallery">
-  <header class="adds-head"><div class="adds-meta"><span>01 / SELECTED WORK</span><span>GRAPHIC DESIGN · ART DIRECTION</span></div><h1>ADDS<span>.</span></h1><p>FIVE IDEAS. DIFFERENT FORMATS. ONE CREATIVE MIND.</p></header>
+ main.innerHTML=`<section class="adds-shell" aria-label="ADS graphic works gallery">
+  <header class="adds-head"><div class="adds-meta"><span>01 / SELECTED WORK</span><span>GRAPHIC DESIGN · ART DIRECTION</span></div><h1>ADS<span>.</span></h1><p>FIVE IDEAS. DIFFERENT FORMATS. ONE CREATIVE MIND.</p></header>
   <div class="adds-player"><div class="adds-art" id="addsArt" aria-live="off"></div>
   <div class="adds-caption-wrap"><div class="adds-caption" id="addsCaption" aria-live="polite"></div><div class="adds-controls"><span id="addsCount">01 / 05</span><button type="button" class="adds-back" id="addsBack" aria-label="Previous graphic piece">←</button><button type="button" class="adds-next" id="addsNext" aria-label="Next graphic piece">→</button></div></div></div>
   <div class="adds-bottom"><span>STUDENT & CONCEPT WORK / NOT OFFICIAL BRAND CAMPAIGNS</span><a href="index.html#work">← BACK TO SELECTED WORK</a></div>

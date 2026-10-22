@@ -57,3 +57,132 @@ header.project-nav .lang-options{background:#171717;}
 /* CAT is typographically emphasized in the dropdown, even when another language is active. */
 .lang-options button[data-lang="ca"]{font-weight:900;}
 .lang-switcher .lang-trigger:has(.lang-current){font-weight:800;}
+
+
+/* Persistent controls: same header on all six detail pages; no animation scripts touched. */
+.project-body { padding-top: 64px; }
+.project-body > header.project-nav {
+  position: fixed; top: 0; left: 0; right: 0; width: 100%;
+  height: 64px; z-index: 10000; box-sizing: border-box;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--padding); background: #fcf7ed;
+}
+.project-body > header.project-nav > a:first-child { flex: 0 0 auto; }
+.project-body > header.project-nav > a:last-child { flex: 0 0 auto; white-space: nowrap; }
+.project-body > header.project-nav .lang-switcher { margin-left: auto; margin-right: clamp(12px,2vw,26px); }
+.project-body > header.project-nav .lang-options { z-index: 10001; }
+/* The home header was already fixed: keep it and its selector above the page. */
+.home-page > header.nav { z-index: 10000; }
+@media(max-width:600px){
+ .project-body { padding-top: 58px; }
+ .project-body > header.project-nav { height:58px; padding-inline:16px; font-size:10px; gap:8px; }
+ .project-body > header.project-nav .lang-switcher { margin-left:auto; margin-right:2px; }
+ .project-body > header.project-nav > a:last-child { font-size:10px; letter-spacing:0; }
+}
+
+/* FIX — Barra comuna persistent als sis projectes.
+   Override explícit de la regla antiga que l'ocultava a quatre projectes.
+   Sense canviar animacions ni estructura de contingut. */
+body.project-body > header.project-nav,
+body.project-body.vela-case-body > header.project-nav,
+body.project-body.plis-case-body > header.project-nav,
+body.project-body.odara-case-body > header.project-nav,
+body.project-body.ante-case-body > header.project-nav,
+body.project-body.adds-case-body > header.project-nav,
+body.project-body.market-case-body > header.project-nav {
+  display: flex !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 64px;
+  z-index: 10000 !important;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f3ee !important;
+  color: #111 !important;
+  padding: 0 var(--padding);
+  box-shadow: none;
+}
+body.project-body > header.project-nav a,
+body.project-body > header.project-nav a:visited {
+  color: #111 !important;
+  text-decoration: none;
+}
+body.project-body > header.project-nav .lang-switcher {
+  display: flex !important;
+  position: relative;
+  margin-left: auto;
+  margin-right: clamp(12px,2vw,26px);
+}
+body.project-body > header.project-nav .lang-trigger,
+body.project-body > header.project-nav .lang-current { color: #111 !important; }
+body.project-body > header.project-nav .lang-options { z-index: 10002; }
+body.project-body { padding-top: 64px; }
+@media(max-width:600px) {
+  body.project-body { padding-top: 58px; }
+  body.project-body > header.project-nav {height:58px; padding-inline:16px;gap:8px;}
+  body.project-body > header.project-nav .lang-switcher {margin-left:auto;margin-right:2px;}
+}
+
+/* Final correction: only one navigation bar; retain the hero project metadata.
+   The unified hero had its own redundant logo/back links. */
+body.project-body .unified-hero .unified-logo,
+body.project-body .unified-hero .unified-back { display:none !important; }
+body.project-body .unified-hero .unified-cover-top { justify-content:flex-end; }
+body.project-body .unified-hero .unified-top-right { margin-left:auto; }
+/* Exact original warm off-white, sampled from the supplied screenshot. */
+body.project-body > header.project-nav,
+body.project-body.vela-case-body > header.project-nav,
+body.project-body.plis-case-body > header.project-nav,
+body.project-body.odara-case-body > header.project-nav,
+body.project-body.ante-case-body > header.project-nav,
+body.project-body.adds-case-body > header.project-nav,
+body.project-body.market-case-body > header.project-nav { background:#fcf7ed !important; }
+
+/* ADS and MARKET RESEARCH: same warm off-white as the single fixed top bar. */
+body.project-body.adds-case-body,
+body.project-body.adds-case-body .case-study,
+body.project-body.adds-case-body .adds-case,
+body.project-body.adds-case-body .adds-shell,
+body.project-body.market-case-body,
+body.project-body.market-case-body .case-study,
+body.project-body.market-case-body .market-shell,
+body.project-body.market-case-body .market-header,
+body.project-body.market-case-body .market-project,
+body.project-body.market-case-body .market-footer {
+  background-color: #fcf7ed !important;
+}
+
+/* Cover spacing refinement: bring the project heading nearer to the fixed bar.
+   Only layout spacing; navigation, language controls and animations unchanged. */
+@media (min-width: 761px) {
+  body.project-body .case-study .unified-hero:is(.vela-hero,.plis-hero,.odara-hero,.ante-hero) {
+    justify-content: flex-start !important;
+  }
+  body.project-body .case-study .unified-hero .unified-cover-main {
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    padding-top: clamp(26px, 4vh, 48px) !important;
+    padding-bottom: 30px !important;
+  }
+  body.project-body .case-study .unified-hero .unified-cover-bottom {
+    margin-top: auto;
+  }
+}
+@media (max-width: 760px) {
+  body.project-body .case-study .unified-hero:is(.vela-hero,.plis-hero,.odara-hero,.ante-hero) {
+    justify-content: flex-start !important;
+  }
+  body.project-body .case-study .unified-hero .unified-cover-main {
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    padding-top: 26px !important;
+    padding-bottom: 24px !important;
+  }
+  body.project-body .case-study .unified-hero .unified-cover-bottom {
+    margin-top: auto;
+  }
+}

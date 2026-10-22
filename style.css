@@ -1435,3 +1435,35 @@ html,body{max-width:100%;}
     top: clamp(180px, 33svh, 255px);
   }
 }
+
+/* CELS MANIFEST — editorial card; other sections untouched. */
+.home-page #manifest.manifest{
+  position:relative;isolation:isolate;overflow:hidden;box-sizing:border-box;
+  margin:0;min-height:clamp(560px,87svh,950px);
+  padding:clamp(45px,7vw,105px) clamp(24px,6.5vw,105px) clamp(50px,6vw,90px);
+  display:flex;flex-direction:column;align-items:stretch;justify-content:center;
+  background:transparent;color:#fcf7ed;border-radius:0;
+}
+.home-page #manifest .label{position:relative;z-index:2;margin:0 0 clamp(55px,9vh,115px);color:#c6f44f;font-weight:700;letter-spacing:.18em}
+.home-page #manifest .manifest-editorial{position:absolute;z-index:0;right:clamp(22px,5vw,86px);top:clamp(24px,4vw,65px);color:#c6f44f;font-size:clamp(11px,1vw,15px);letter-spacing:.14em;font-weight:700}
+.home-page #manifest h2,.home-page #manifest h3{position:relative;z-index:1;margin:0;max-width:none;font-weight:800;letter-spacing:-.065em;text-wrap:balance;overflow-wrap:normal}
+.home-page #manifest h2{font-size:clamp(48px,8.8vw,152px);line-height:.94;color:#fcf7ed}
+.home-page #manifest h3{font-size:clamp(48px,8.8vw,152px);line-height:.94;color:#fcf7ed;align-self:flex-end;text-align:right}
+.home-page #manifest h3 em{color:#c6f44f;font-style:normal}
+.home-page #manifest .manifest-divider{display:flex;align-items:center;gap:clamp(10px,2vw,24px);width:100%;margin:clamp(24px,4.5vw,68px) 0;color:#c6f44f;font-size:clamp(19px,3.6vw,48px);line-height:1}
+.home-page #manifest .manifest-divider i{flex:1;border-top:2px solid #c6f44f;opacity:.65}
+.home-page #manifest .manifest-signoff{position:relative;z-index:1;align-self:flex-start;margin:clamp(48px,8vh,100px) 0 0;color:#c6f44f;font-weight:700;letter-spacing:.14em;font-size:clamp(10px,1vw,14px)}
+@media(max-width:750px){
+ .home-page #manifest.manifest{margin:0;min-height:70svh;padding:72px 22px 45px;border-radius:0}
+ .home-page #manifest .label{margin-bottom:65px}
+ .home-page #manifest h2,.home-page #manifest h3{font-size:clamp(39px,10.7vw,75px);line-height:1.03;letter-spacing:-.055em;overflow-wrap:anywhere}
+ .home-page #manifest .manifest-divider{margin:24px 0}
+ .home-page #manifest .manifest-signoff{margin-top:62px;max-width:90%}
+}
+
+/* MANIFEST — subtle typography reduction and consistent section-label grey. */
+.home-page #manifest .label{color:#fcf7ed;font-weight:400;letter-spacing:.08em}
+.home-page #manifest h2,.home-page #manifest h3{font-size:clamp(44px,7.7vw,130px)}
+@media(max-width:750px){
+  .home-page #manifest h2,.home-page #manifest h3{font-size:clamp(36px,9.3vw,66px)}
+}
